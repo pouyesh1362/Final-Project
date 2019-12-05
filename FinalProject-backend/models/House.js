@@ -13,19 +13,17 @@ Room:{
   type:Number,
   required:[true, 'Room number is required'],
 },
-address:{
-  state:{
+state:{
     type:String,
     required:[ true, 'State is required']
-  },
-  City:{
+},
+City:{
     type:String,
     required:[true, 'City required'],
-  },
-  ZipCode:{
+},
+ZipCode:{
     type:Number,
     required:[true, 'Zip Code required']
-  },
 },
 owner:{
 type: mongoose.Schema.Types.ObjectId,

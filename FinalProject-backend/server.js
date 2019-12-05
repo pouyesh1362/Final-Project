@@ -16,7 +16,7 @@ const corsOption = {
   optionsSuccessStatus:200,
 };
 app.use(cors(corsOption));
-//--------------------------------------Body Parser
+//--------------------------------------Body Parser-------
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -39,7 +39,7 @@ app.get('/',(req,res) =>{
   res.send("<h1>Final project API</h1>")
 })
 app.use('/api/v1/auth', routes.auth);
-// app.use('/api/v1/user', routes.user);
-// app.use('/api/v1/house', routes.house);
+app.use('/api/v1/users', routes.user);
+app.use('/api/v1/houses', routes.house);
 
 app.listen(PORT, ()=>console.log(`Server connected at http://localhost:${PORT}`));
